@@ -1,7 +1,9 @@
 var express = require('express');
 var app = express();
+var addCatPeter = require('./lib/db');
 
 app.get('/', function (req, res) {
+    addCatPeter();
     res.send('Hello World!');
 });
 
